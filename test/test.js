@@ -1,6 +1,6 @@
 const assert = require('assert');
 const rollup = require('rollup');
-const webAssembly = require('..');
+const webAssembly = require('../src/index');
 
 const executeBundle = (bundle) =>
   bundle.generate({
