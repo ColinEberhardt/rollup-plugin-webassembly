@@ -14,6 +14,8 @@ wasm()
   );
 ~~~
 
+This plugin is particularly useful if you want to distribute a library or framework that mixes WebAssembly and JavaScript code. Note, the WebAssembly JavaScript API compiles WebAssembly modules asynchronously, hence the above code returns the module via a Promise.
+
 # Installation
 
 Install via npm:
