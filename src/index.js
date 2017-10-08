@@ -9,7 +9,7 @@ function webassembly(options = {}) {
   return {
     name: 'webassembly',
 
-    transform(wasmCode, id) {
+    load(id) {
       if (!ext.test(id)) {
         return null;
       }
@@ -17,6 +17,7 @@ function webassembly(options = {}) {
         return null;
       }
 
+      const wasmCode = readFileSync(id);
       const encoded = Buffer.from(wasmCode, 'binary').toString('base64')
 
       const code = `
